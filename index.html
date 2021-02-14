@@ -83,10 +83,10 @@
 function productQuantityChange (product, isIncrease){
 
          
-         const productInput = document.getElementById(product + '-count');
-         const productCount = parseInt(productInput.value);
+   // const productInput = document.getElementById(product + '-count');
+   // const productCount = parseInt(productInput.value);
 
-         // const productCount = getInputValue(product);
+          productCount = getInputValue(product);
 
 
          let productNewCount = productCount;
@@ -97,7 +97,7 @@ function productQuantityChange (product, isIncrease){
             productNewCount = productCount-1;
          }
                  
-         productInput.value = productNewCount;
+         document.getElementById(product+'-count').value = productNewCount;
 
          let productTotal = 0;
          if (product == 'phone'){
